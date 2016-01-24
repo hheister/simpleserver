@@ -5,6 +5,8 @@ var fs = require('fs');
 var app = express();
 
 //app.use(express.basicAuth("horst", "heidi"));
+console.log('process.env.PORT:' + process.env.PORT);
+app.set('port', process.env.PORT || 3300);
 
 // Puts the parsed body in req.body (used in POST to get the data)
 app.use(express.bodyParser());
@@ -119,6 +121,9 @@ function send_failure(res, code, err) {
 }
 
 ///app.listen(8080);
-app.listen(8080, function() {
+/*app.listen(8080, function() {
     console.log('Server up and listening: http://localhost:8080...');
+});*/
+var server = app.listen(app.get('port'), function() {
+    console.log('Server up: http://localhost:' + app.get('port'));
 });
