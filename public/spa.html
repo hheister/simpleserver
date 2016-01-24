@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horst Single Page App</title>
+</head>
+<body>
+<h1>Single Page App</h1>
+
+<div>
+    <label data-bind="text:labelText"></label>
+</div>
+<div>
+    <b>Template Test</b>
+    <br>
+    <div data-bind="template: { name: 'simple-template', data: 'data' }"></div>
+</div>
+<script data-main="js/main" src="/js/vendors/require.js"></script>
+</body>
+</html>
