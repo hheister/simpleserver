@@ -23,7 +23,8 @@ function ($, ko, koTemplateEngine, koBindings) {
 
     // ko External Template Settings
     infuser.defaults.templateSuffix = ".html";
-    infuser.defaults.templateUrl = "http://localhost:8080/templates";
+    //infuser.defaults.templateUrl = "http://localhost:8080/templates";
+    infuser.defaults.templateUrl = "/templates";
 
 //alert('infuser.defaults.templateUrl=' + infuser.defaults.templateUrl);
     vm.activate();
